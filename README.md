@@ -20,3 +20,4 @@ it also contains the following commands, they can be run using npm run <command>
 ## Demo 
 
 the boilerplate includes a demo showcasing a simple card with a hover animation using styled components. 
+![demo](https://user-images.githubusercontent.com/27336508/61411033-0fd4f780-a8ab-11e9-846a-2186a2898da6.gif)
