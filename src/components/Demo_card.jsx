@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = styled.div`
+  margin: 1em 0.5em;
   position: relative;
   padding: 0 1em 2em;
   width: 15em;
@@ -77,13 +78,14 @@ class Demo_card extends React.Component {
   }
 
   render() {
+    const { greeting, language } = this.props;
     return (
       <Card>
-        <Greeting>Greetings World!</Greeting>
+        <Greeting>{greeting}</Greeting>
         <Go_corner>
           <StyledIcon icon="dice-d20" />
         </Go_corner>
-        <Secret>language</Secret>
+        <Secret>{language}</Secret>
       </Card>
     );
   }

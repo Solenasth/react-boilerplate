@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const Demo_card_container = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
 `;
 
 class Demo extends React.Component {
@@ -20,7 +22,10 @@ class Demo extends React.Component {
         { lang: "Serbian", greeting: "Zdravo Svete" },
         { lang: "Hindi", greeting: "Namaste Duniya" },
         { lang: "Nepali", greeting: "Namaskāra sansāra" },
-        { lang: "German", greeting: "Hallo Welt" }
+        { lang: "German", greeting: "Hallo Welt" },
+        { lang: "Nyanja", greeting: "Moni Mdziko" },
+        { lang: "Canares", greeting: "Śubhāśaya jagattu" },
+        { lang: "Zulu", greeting: "imikhonzo emhlabeni" }
       ]
     };
   }
@@ -36,7 +41,15 @@ class Demo extends React.Component {
   render() {
     return (
       <Demo_card_container>
-        <Demo_card />
+        {this.state.greetings.map(card => {
+          return (
+            <Demo_card
+              greeting={card.greeting}
+              language={card.lang}
+              key={card.greeting}
+            />
+          );
+        })}
       </Demo_card_container>
     );
   }
