@@ -1,5 +1,10 @@
 import React from "react";
 import Demo_card from "../components/Demo_card.jsx";
+import styled from "styled-components";
+
+const Demo_card_container = styled.div`
+  display: flex;
+`;
 
 class Demo extends React.Component {
   constructor(props) {
@@ -30,9 +35,9 @@ class Demo extends React.Component {
 
   render() {
     return (
-      <div>
+      <Demo_card_container>
         <Demo_card />
-      </div>
+      </Demo_card_container>
     );
   }
 }
